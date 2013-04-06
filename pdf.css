@@ -9,120 +9,18 @@
 /* Page */
 @page {
   size:6in 9in;
-  margin: 2cm;
+  margin: 1.9cm;
   font-size: 9pt;
   orphans:3; 
   widows:3;  
 }
 
 @page :left {
-  margin-left: 1.5cm;
+  margin-left: 1.27cm;
 }
 
 @page :right {
-  margin-right: 1.5cm;
-}
-
-/* TOC */
-@page toc {
-  @bottom {
-	content: counter(page, lower-roman);
-	font-family: Helvetica, Arial, sans-serif;	
-	vertical-align: center;
-  }
-}
-@page toc:blank {
-  @bottom {
-	content: "";
-  }
-}
-
-/* Front-Matter */
-@page front-matter:left
-{
-  @top-left
-  {
-	content: counter(page, lower-roman) "\A0\A0" string(book-title);
-	font-family: Helvetica, Arial, sans-serif;	
-	vertical-align: left;
-  }
-}
-@page front-matter:right {
-  @top-right {
-	content: string(section-title, last) "\A0\A0" counter(page, lower-roman);
-	font-family: Helvetica, Arial, sans-serif;	
-	vertical-align: right;
-  }
-}
-@page front-matter:first {
-  @top-right {
-	content: "";
-  }
-   @bottom {
-	content: counter(page, lower-roman);
-  	font-family: Helvetica, Arial, sans-serif;	
-	vertical-align: center;
-  }
-}
-@page front-matter:blank {
-    @top-left {
-		content: "";
-    }
-	@bottom {
-		content: "";
-	}
-}
-
-/* Dedication &amp; Epigraph */
-@page dedication,
-	  epigraph {
-  @bottom {
-	content:"";
-  }
-}
-@page dedication:blank {
-  @bottom {
-	content:"";
-  }
-}
-
-/* Introduction */
-
-@page introduction:left {
-  @top-left {
-	content: counter(page) "\A0\A0" string(book-title);
-  	font-family: Helvetica, Arial, sans-serif;	
-	vertical-align: left;	
-  }
-}
-@page introduction:right {
-  @top-right {
-	content: string(section-title, last) "\A0\A0" counter(page);
-  	font-family: Helvetica, Arial, sans-serif;	
-	vertical-align: right;
-  }
-}
-
-@page introduction:first {
-  @top-left {
-	content: "";
-  }
-  @top-right {
-	content: "";
-  }
-  @bottom {
-	content: counter(page);
-	font-family: Helvetica, Arial, sans-serif;		
-	vertical-align: center;
-  }
-  
-}
-@page introduction:blank {
-
-  @top-left {
-	content: "";
-  }
-
+  margin-right: 1.27cm;
 }
 
 /* Chapter */
@@ -131,7 +29,7 @@
   @bottom {
 	content: counter(page);
 	font-family: Helvetica, Arial, sans-serif;	
-	vertical-align: left;
+	vertical-align: center;
   }
 }
 @page chapter:right
@@ -166,47 +64,6 @@
   }
 }
 
-/* Footnotes */
-@page {
-    @footnotes {
-		padding-top: 1em;
-	}
-}
-/* Back-matter */
-@page back-matter:left {
-  @top-left {
-	content: counter(page) "\A0\A0" string(book-title);
-	font-family: Helvetica, Arial, sans-serif;	
-	vertical-align: left;
-  }
-}
-@page back-matter:right {
-  @top-right
-  {
-	content: string(section-title, last) "\A0\A0" counter(page);
-	font-family: Helvetica, Arial, sans-serif;	
-	vertical-align: right;
-  }
-}
-@page back-matter:first {
-  @top-left {
-	content: "";
-  }
-  @top-right {
-	content: "";
-  }
-  @bottom
-  {
-	content: counter(page);
-	font-family: Helvetica, Arial, sans-serif;		
-	vertical-align: center;
-  }
-}
-@page back-matter:blank {
-  @top-left {
-	content: "";
-  }
-}
 #toc {
 	page: toc;
 	prince-page-group: start;
@@ -248,7 +105,7 @@ div.part {
 	padding: part;	
 }
 body {
-	font: 12pt/1.6 "Times New Roman", Georgia, serif;
+	font: 0.8em "Times New Roman", Georgia, serif;
 }
 a {
 	color: blue;

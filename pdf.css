@@ -260,51 +260,13 @@ p {
 	margin-bottom: 0;
 	orphans: 3;
 	widows:3;
-}
-p,
-.indent {
 	text-indent: 1.5em;
 	margin-top: 0;
-}
-.nonindent,
-.no-indent {
-	text-indent: 0;
 }
 h1, h2, h3, h4, h5, h6 {
 	font-family: Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
 	font-weight: normal;
-}
-p + ul {
-	margin-top: 10px;
-}
-hr {
-	margin: 10px auto;
-	text-align: center;
-	width: 20%;
-}
-hr.break-symbols {
-	border: none;
-	font-size: 1.1em;
-    margin-bottom: 20px;
-}
-hr.break-symbols::after {
-	display: block;
-	content: "66D";
-	font-size: 18pt;
-	text-align: center;
-}
-p.bl_nonindent {
-	margin: 2em 10% 0;
-	text-indent: 0;
-}
-p.bl_indent {
-	margin: 0 10%;
-	text-indent: 1em;
-}
-.hanging-indent {
-	padding-left: 1em;
-    text-indent: -1em;
 }
 
 /* HALFTITLE PAGE
@@ -528,175 +490,9 @@ div.ugc h5 + p {
 	margin-top: 0;
 }
 
-/* FOOTNOTES
-* @see: http://www.princexml.com/doc/8.1/footnotes/
-================== */
-
-.footnote {
-	font-size: 0.75em;
-	display: none;
-	display: footnote;
-	display: prince-footnote;
-	position: footnote;
-	counter-increment: footnote;
-	footnote-style-position: inside;
-	margin-left: 0;
-	line-height: 1.4;
-	text-indent: 1em; 
-}
-sup.endnote {
-	line-height: 1em;
-    vertical-align: top;
-}
-
-/* FOOTNORES &amp; ENDNOTES
-======================== */
-.footnote { /* added by prince in a span */
-	padding-left: 1em;
-	text-indent: -1em;
-}
-.endnotes hr {
-	border: none;
-	margin-top: 1cm;
-}
-.endnotes h3 {
-	margin-bottom: 0;
-}
-.endnotes ol {
-	font-size: 8pt;
-	margin-top: 5px;
-	margin-left: 0;
-}
-.endnotes li {
-	padding-left: 1em;
-	text-indent: -1em;	
-}
-
-.endnotes p + p {
-	text-indent: 0;
-}
-/* ASIDES, PULLQUOTES &amp; TEXTBOXES
-================================== */
-.aside {
-	font-style: italic;
-	border-top: 1px solid #000;
-	border-bottom: 1px solid #000;
-	margin: 2em 10%;
-    line-height: 1.2em;	
-	padding: 10px 0;
-	text-indent: 0;
-}
-.textbox {
-	border: 1px solid #000;
-    font-size: 0.9em;	
-    line-height: 1.2em;
-	margin: 10px 0;
-	padding: 10px;
-}
-.textbox.shaded {
-	background-color: #eee;
-}
-.textbox p {
-	margin-top: 0;
-}
-.textbox-caption {
-	display: block;
-	font: bold 0.875em Helvetica, Arial, sans-serif;
-	margin: 0;
-}
-.pullquote {
-	border: 1px solid #000;
-	border-width: 1px 0;
-	margin: 20px auto;
-	padding: 5px 0;
-	text-align: center;
-	width: 45%;
-}
-.pullquote-left {
-	border: 1px solid #000;
-	border-width: 1px 0;
-	float: left;
-	margin: 0.8em 15px 0.8em 0;
-	padding: 5px 0;
-	text-align: center;
-	width: 45%;
-}
-.pullquote-right {
-	border: 1px solid #000;
-	border-width: 1px 0;
-	float: right;
-	margin: 0.8em 0 0.8em 15px;
-	padding: 5px 0;
-	text-align: center;
-	width: 45%;
-}
-
-
 /* IMAGES
 ================== */
 img {
 	height: auto;
 	max-width: 100%;
-}
-.alignleft {
-	float: left;
-	margin: 1em 1em 1em 0;
-}
-.alignright {
-	float: right;
-	margin: 1em 0 1em 1em;
-}
-.aligncenter {
-	display: block;
-	margin: 1em auto;
-	text-align: center;
-}
-div.aligncenter {
-	display: block;
-	margin: 1em auto;
-	text-align: center;
-}
-img.aligncenter {
-	display: block;
-	margin: 1em auto;
-	text-align: center;
-}
-.wp-caption {
-	height: auto;
-	max-width: 100%;
-}
-.wp-caption-text {
-	font-size: 0.875em;
-	font-style: italic;
-	margin-top: 5px;
-}
-
-/* BIBLIOGRAPHY
- =============== */
-
-.bibliography p  {
-	font-size: 9pt;
-	padding-left: 14pt;
-	text-indent: -14pt;
-}
-
-/* INDEX 
-================== */
-.index .ugc  {
-	column-count: 2;
-	column-gap: 2.5em;
-	text-align: left;
-
-}
-.index .ugc  div {
-	margin-bottom: 4em;
-}
-.index .ugc  p {
-    font-size: 9pt;
-	padding-left: 14pt;
-	text-indent: -14pt;
-	text-align: left;
-}
-.index .ugc  p.sub-entry {
-	padding-left:30px;
 }

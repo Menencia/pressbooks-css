@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Page */
 @page {
-  size:4.25in 7in;
+  size:4.25in 7in !important;
   margin: 1.5cm;
   margin-top: 1.2cm;
   font-size: 9pt;

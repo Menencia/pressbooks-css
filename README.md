@@ -1,4 +1,4 @@
-pb-css
-======
+pressbooks-css
+==============
 
-CSS for Pressbooks
+Custom CSS for Pressbooks : PDF & Ebook

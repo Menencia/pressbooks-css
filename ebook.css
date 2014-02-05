@@ -4,71 +4,71 @@
 
 body {
   font-family: "Times New Roman", Georgia, serif;
-	line-height: 1.5em;
-}	 
+  line-height: 1.5em;
+}  
 a {
-	color: #009;
-	text-decoration: none;
+  color: #009;
+  text-decoration: none;
 }
 
 /*
    DEFAULT STYLES 
  =================== */
 p {
-	margin: 0;
-	text-indent: 1.2em;
+  margin: 0;
+  text-indent: 1.2em;
 }
 
 /* 
-	 HEADERS
+   HEADERS
  =============== */
-h1, h2, h3, h4, h5, h6 {
-	font-family: Helvetica, Arial, sans-serif;
-	line-height: 1.4em;
+h1, h2, h3 {
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
 }
 h1 {
-	font-size: 1.5em;
+  font-size: 1.5em;
 }
 h2 {
-	font-size: 1.2em;
+  font-size: 1.2em;
 }
 h3 {
-  	font-size: 1.1em;
+    font-size: 1.1em;
 }
 
 
 /* TITLE PAGE
 ================ */
 #title-page > .title {
-	font-size: 2em;
+  font-size: 2em;
 }
 #title-page > .title ,
 #title-page > .subtitle,
 #title-page > .author {
-	font-weight: normal;
+  font-weight: normal;
 }
 
 /* COPYRIGHT PAGE
 =================== */
 #copyright-page > div.ugc p {
-	font-size: 0.7em;
-    text-indent: 0;
-    margin-bottom: 0.5em;
+  font-size: 0.7em;
+  text-indent: 0;
+  margin-bottom: 0.5em;
 }
 
-/*  TITLES for FRONT-MATTER, BACK_MATTER, CHAPTER & PART  
+/*  TITLES for FRONT-MATTER, BACK_MATTER, CHAPTER &amp; PART  
 ========================================================= */
 .display-none, .front-matter-number, .back-matter-number {
-	display: none;
+  display: none;
 }
 .introduction .front-matter-title-wrap,
 .preface .front-matter-title-wrap,
 .chapter-title-wrap,
 .back-matter-title-wrap {
-	border-top: 1px solid #000;
-	font-weight: normal;	
-	margin-bottom: 1.5cm;		
-	text-align: left;	
+  border-top: 1px solid #000;
+  font-weight: normal;  
+  margin-bottom: 1.5cm;   
+  text-align: left; 
 }
 .front-matter-title,
 .chapter-title {
@@ -77,25 +77,8 @@ h3 {
     padding: 15px 15px 0 0;
 }
 
-/*  BODY TITLES
-===================	*/
-.ugc h1, 
-.ugc h2, 
-.ugc h3, 
-.ugc h4, 
-.ugc h5, 
-.ugc h6 {
-	page-break-after: avoid;	
-}
-
 /* TABLE OF CONTENT 
  ===================== */
 #toc {
-	display: none;
-}
-
-/* IMAGES
-================== */
-img {
-	height: auto;
+  display: none;
 }

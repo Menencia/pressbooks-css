@@ -151,7 +151,7 @@ p {
 
 /* halftitle page */
 
-body &gt; h1.title:first-child {
+body > h1.title:first-child {
   string-set: book-title content();
   page-break-after: always;
   font-size: 16pt;
@@ -166,19 +166,19 @@ body &gt; h1.title:first-child {
     height: 100%;
 }
 
-#title-page &gt; .title {
+#title-page > .title {
   font-size: 28pt;
   margin-top: 2cm;
   text-transform: uppercase;
 }
 
-#title-page &gt; .subtitle {
+#title-page > .subtitle {
   font-size: 20pt;
   margin-top: 1.5cm;
   text-transform: uppercase;
 }
 
-#title-page &gt; div.logo {
+#title-page > div.logo {
   margin-top: 2cm;
   height: 26px;
   background-repeat: no-repeat;
@@ -189,7 +189,7 @@ body &gt; h1.title:first-child {
   margin-top: 4cm;
 }
 
-#title-page &gt; .author {
+#title-page > .author {
   font-size: 17pt;
   margin-top: 1.5cm;
   text-transform: uppercase;  
@@ -207,7 +207,7 @@ body &gt; h1.title:first-child {
   margin-bottom: 0.5em;
 }
 
-#copyright-page &gt; .ugc {    
+#copyright-page > .ugc {    
  float: bottom;    
 }
 

@@ -18,7 +18,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* table of contents */
 
-h2 {
+div.part h1 {
+  prince-bookmark-level: 0;
+  bookmark-level: 0;
+}
+
+div.prologue h1, div.chapter h2 {
   prince-bookmark-level: 1;
   bookmark-level: 1;
 }
@@ -146,7 +151,7 @@ p {
 
 /* halftitle page */
 
-body > h1.title:first-child {
+body &gt; h1.title:first-child {
   string-set: book-title content();
   page-break-after: always;
   font-size: 16pt;
@@ -161,19 +166,19 @@ body > h1.title:first-child {
     height: 100%;
 }
 
-#title-page > .title {
+#title-page &gt; .title {
   font-size: 28pt;
   margin-top: 2cm;
   text-transform: uppercase;
 }
 
-#title-page > .subtitle {
+#title-page &gt; .subtitle {
   font-size: 20pt;
   margin-top: 1.5cm;
   text-transform: uppercase;
 }
 
-#title-page > div.logo {
+#title-page &gt; div.logo {
   margin-top: 2cm;
   height: 26px;
   background-repeat: no-repeat;
@@ -184,7 +189,7 @@ body > h1.title:first-child {
   margin-top: 4cm;
 }
 
-#title-page > .author {
+#title-page &gt; .author {
   font-size: 17pt;
   margin-top: 1.5cm;
   text-transform: uppercase;  
@@ -202,7 +207,7 @@ body > h1.title:first-child {
   margin-bottom: 0.5em;
 }
 
-#copyright-page > .ugc {    
+#copyright-page &gt; .ugc {    
  float: bottom;    
 }
 
@@ -225,4 +230,3 @@ h3.chapter-number {
 .display-none, h3.part-number, h3.front-matter-number, h3.back-matter-number {
   display: none;
 }
-

@@ -39,18 +39,18 @@ h3 {
 
 /* TITLE PAGE
 ================ */
-#title-page > .title {
+#title-page &gt; .title {
   font-size: 2em;
 }
-#title-page > .title ,
-#title-page > .subtitle,
-#title-page > .author {
+#title-page &gt; .title ,
+#title-page &gt; .subtitle,
+#title-page &gt; .author {
   font-weight: normal;
 }
 
 /* COPYRIGHT PAGE
 =================== */
-#copyright-page > div.ugc p {
+#copyright-page &gt; div.ugc p {
   font-size: 0.7em;
   text-indent: 0;
   margin-bottom: 0.5em;

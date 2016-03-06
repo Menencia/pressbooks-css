@@ -1,224 +1,242 @@
 /* PRINCE XML
  * @author Menencia
- * CSS Version: 0.2
+ * CSS Version: 0.3
 ================== */
 
 /* font */
 
-@import url(http://fonts.googleapis.com/css?family=Oswald);
-@import url(http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:700);
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700);
 
 /* titles */
 
 h1, h2, h3, h4, h5, h6 {
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  prince-bookmark-level: none;
-  bookmark-level: none;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    prince-bookmark-level: none;
+    bookmark-level: none;
 }
 
 /* table of contents */
 
 div.part h1 {
-  prince-bookmark-level: 0;
-  bookmark-level: 0;
+    prince-bookmark-level: 0;
+    bookmark-level: 0;
 }
 
 div.prologue h1, div.chapter h2 {
-  prince-bookmark-level: 1;
-  bookmark-level: 1;
+    prince-bookmark-level: 1;
+    bookmark-level: 1;
 }
 
-/* main font */ 
+/* main font */
 
 body {
-  font: 11pt/1.3 "Gentium Basic", "Times New Roman", serif;
+    font: 11pt/1.3 "Crimson Text", "Times", serif;
 }
 
 /* pages */
 
 @page {
-  size: 4.25in 6.88in !important;
-  margin: 0.5in;
-  orphans: 3;
-  widows: 3;
-}
-@page :left {
-  margin-right: 0.75in;
-}
-@page :right {
-  margin-left: 0.75in;
+    size: 4.25in 6.88in;
+    margin: 0.5in;
+    orphans: 3;
+    widows: 3;
 }
 
-/* front-matter */
+@page :left {
+    margin-right: 0.75in;
+}
+
+@page :right {
+    margin-left: 0.75in;
+}
+
+/* front-matter (prologue) */
 
 @page front-matter:left {
-  @bottom-left {
-    content: counter(page);
-    vertical-align: left;
-  }
+    @bottom-left {
+        content: counter(page);
+        vertical-align: left;
+        font: 0.9em 'Lato', sans-serif;
+        color: #999;
+    }
 }
+
 @page front-matter:right {
-  @bottom-right {
-    content: counter(page);
-    vertical-align: right;
-  }
+    @bottom-right {
+        content: counter(page);
+        vertical-align: right;
+        font: 0.9em 'Lato', sans-serif;
+        color: #999;
+    }
 }
+
 @page front-matter:blank {
-  @bottom-left {
-    content: "";
-  }
-  @bottom-right {
-    content: "";
-  }
+    @bottom-left {
+        content: "";
+    }
+    @bottom-right {
+        content: "";
+    }
 }
 
 /* chapters */
 
 @page chapter:left {
-  @bottom-left {
-  content: counter(page);
-  vertical-align: left;
-  }
-}
-@page chapter:right {
-  @bottom-right {
-  content: counter(page);
-  vertical-align: right;
-  }
-}
-@page chapter:blank {
-  @bottom-left {
-    content: "";
-  }
-  @bottom-right {
-    content: "";
-  }
+    @bottom-left {
+        content: counter(page);
+        vertical-align: left;
+        font: 0.9em 'Lato', sans-serif;
+        color: #999;
+    }
 }
 
+@page chapter:right {
+    @bottom-right {
+        content: counter(page);
+        vertical-align: right;
+        font: 0.9em 'Lato', sans-serif;
+        color: #999;
+    }
+}
+
+@page chapter:blank {
+    @bottom-left {
+        content: "";
+    }
+    @bottom-right {
+        content: "";
+    }
+}
 
 /* Matching elements */
 
 #toc {
-  page: toc;
-  prince-page-group: start;
+    page: toc;
+    prince-page-group: start;
 }
+
 div.front-matter {
-  page: front-matter;
-  prince-page-group: start;
+    page: front-matter;
+    prince-page-group: start;
 }
+
 div.front-matter.epigraph {
-  page: epigraph;
-  prince-page-group: start;
+    page: epigraph;
+    prince-page-group: start;
 }
+
 div.front-matter.introduction {
-  page: introduction;
-  prince-page-group: start;
+    page: introduction;
+    prince-page-group: start;
 }
+
 div.chapter {
-  page: chapter;
-  prince-page-group: start;
+    page: chapter;
+    prince-page-group: start;
 }
+
 div.back-matter {
-  page: back-matter;
-  prince-page-group: start;
+    page: back-matter;
+    prince-page-group: start;
 }
 
 /* links */
 
 a {
-  border: .5px solid #02b4c1;
-  color: black;
-  text-decoration: none;
+    border-bottom: 1px dotted #444;
+    color: #444;
+    text-decoration: none;
 }
 
 /* hyphens */
 
 p {
-  text-align: justify;
-  text-indent: 0.2in;
-  margin-bottom: 0;
-  margin-top: 0;
+    text-align: justify;
+    text-indent: 0.2in;
+    margin-bottom: 0.1em;
+    margin-top: 0;
 }
 
 /* halftitle page */
 
-body &gt; h1.title:first-child {
-  string-set: book-title content();
-  page-break-after: always;
-  font-size: 16pt;
-  margin-top: 6cm;
-  text-transform: uppercase;
+body > h1.title:first-child {
+    string-set: book-title content();
+    page-break-after: always;
+    font-size: 16pt;
+    margin-top: 6cm;
+    text-transform: uppercase;
 }
 
 /* title page */
 
-#title-page { 
+#title-page {
     page-break-before: right;
     height: 100%;
 }
 
-#title-page &gt; .title {
-  font-size: 28pt;
-  margin-top: 2cm;
-  text-transform: uppercase;
+#title-page > .title {
+    font-size: 28pt;
+    margin-top: 2cm;
+    text-transform: uppercase;
 }
 
-#title-page &gt; .subtitle {
-  font-size: 20pt;
-  margin-top: 1.5cm;
-  text-transform: uppercase;
+#title-page > .subtitle {
+    font-size: 20pt;
+    margin-top: 1.5cm;
+    text-transform: uppercase;
 }
 
-#title-page &gt; div.logo {
-  margin-top: 2cm;
-  height: 26px;
-  background-repeat: no-repeat;
-  background-position: bottom center;
+#title-page > div.logo {
+    margin-top: 2cm;
+    height: 26px;
+    background-repeat: no-repeat;
+    background-position: bottom center;
 }
 
 #title-page .title + div.logo {
-  margin-top: 4cm;
+    margin-top: 4cm;
 }
 
-#title-page &gt; .author {
-  font-size: 17pt;
-  margin-top: 1.5cm;
-  text-transform: uppercase;  
+#title-page > .author {
+    font-size: 17pt;
+    margin-top: 1.5cm;
+    text-transform: uppercase;
 }
 
 /* copyright */
 
 #copyright-page {
-  page-break-before: always;
+    page-break-before: always;
 }
 
 #copyright-page p {
-  font-size: 9pt;
-  text-indent: 0;
-  margin-bottom: 0.5em;
+    font-size: 9pt;
+    text-indent: 0;
+    margin-bottom: 0.5em;
 }
 
-#copyright-page &gt; .ugc {    
- float: bottom;    
+#copyright-page > .ugc {
+    float: bottom;
 }
 
 /* page breaks */
 
 div.part, div.front-matter, div.back-matter, div.chapter {
-  page-break-before: right;
+    page-break-before: right;
 }
 
 /* pagination */
 
 h3.chapter-number {
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  padding-bottom: 1em;
-  text-transform: uppercase;
-  margin-bottom: 3em;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    padding-bottom: 1em;
+    text-transform: uppercase;
+    margin-bottom: 3em;
 }
 
 .display-none, h3.part-number, h3.front-matter-number, h3.back-matter-number {
-  display: none;
+    display: none;
 }

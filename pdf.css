@@ -1,7 +1,7 @@
 /* 
  * Règles de style pour le roman
  * 
- * FINAL FANTASY VII: EXPERIENCE
+ * FINAL FANTASY VII: EXPÉRIENCE
  * 
  * @author  Menencia
  * @version 0.4
@@ -34,7 +34,7 @@ body {
     font: 12pt/1.5 "Crimson Text", "Times", serif;
 }
 
-/* Paragraphes: indentation, marges */
+/* Paragraphes : indentation, marges */
 
 p {
     text-align: justify;
@@ -52,7 +52,7 @@ a, a:visited {
 /* 
  * Dimensions des pages + marges intérieures 
  * 
- * Important: laisse la mention pour être en 
+ * Important : laisser la mention pour être en 
  * priorité sur les options de PB 
  */
 
@@ -163,6 +163,12 @@ body &gt; h1.title:first-child {
     float: bottom;
 }
 
+/* 
+ * Page de l'épigraphe 
+ *
+ * Texte justifié finalement
+ */
+
 #epigraphe p:first-child {
     text-indent: 0;
     text-align: justify;
@@ -209,32 +215,19 @@ body &gt; h1.title:first-child {
     }
 }
 
-/* Style des numéros de chapitres */
+/* Style des numéros de chapitre */
 
 .chapter-number {
-	width: 0.25in;
-	text-align: center;
+    width: 0.25in;
+    text-align: center;
     text-transform: uppercase;
     margin: auto;
     margin-top: 3em;
     border-bottom: 1px solid #444;
 }
 
-/* Style des titres pour le prologue */
-
-.front-matter-title {
-	margin-top: 3em;
-	margin-bottom: 2em;
-}
-
-/* Style des titres pour les chapitres */
-
-.chapter-title {
-	margin-bottom: 2em;
-}
-
 /* 
- * Styles des titres
+ * Styles des titres en général
  */
 
 h1, h2, h3, h4, h5, h6 {
@@ -244,6 +237,19 @@ h1, h2, h3, h4, h5, h6 {
     /* Initialisation de la table des matières */
     prince-bookmark-level: none;
     bookmark-level: none;
+}
+
+/* Style des titres pour le prologue */
+
+.front-matter-title {
+    margin-top: 3em;
+    margin-bottom: 2em;
+}
+
+/* Style des titres pour les chapitres */
+
+.chapter-title {
+    margin-bottom: 2em;
 }
 
 /*
@@ -281,7 +287,7 @@ h1, h2, h3, h4, h5, h6 {
 /* 
  * Saut à la page
  * 
- * Forcer et aller à la page suivante  à la fin de chaque section
+ * Forcer et aller à la page suivante à la fin de chaque section
  */
 
 #title-page, 
@@ -294,7 +300,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*
- * Règles par défaut
+ * Règle par défaut
  */
 
 .display-none { 

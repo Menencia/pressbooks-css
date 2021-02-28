@@ -1,3 +1,10 @@
+/**
+ * FF7e - design by Menencia
+ *
+ * Version 6
+ *
+ */
+
 @font-face {
     font-family: 'Alegreya';
     src: url('fonts/Alegreya-Bold.ttf') format('truetype');
@@ -125,7 +132,7 @@ h2.chapter-author {
 
 body {
     font-family: "Alegreya", "Baskerville", "Times", serif;
-    font-size: 10.5pt;
+    font-size: 10pt;
     line-height: 1.4em;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -984,11 +991,11 @@ h5.publisher-city {
 }
 
 @page :left {
-    margin: 0.6875in 0.875in 1in 1.125in;
+    margin: 2cm 2cm 2.5cm 1.5cm;
 }
 
 @page :right {
-    margin: 0.6875in 1.125in 1in 0.875in;
+    margin: 2cm 1.5cm 2.5cm 2cm;
 }
 
 #half-title-page,
@@ -1352,37 +1359,37 @@ meta[name="pb-publisher-city"] {
 
 @page front-matter:left {
     @bottom-left {
-        content: counter(page) '\A0\A0|\A0\A0'""string(book-author) "";
+        content: counter(page) "" '\A0\A0|\A0\A0' string(book-title) "";
     }
 }
 
 @page front-matter:right {
     @bottom-right {
-        content: ""string(book-title) ""'\A0\A0|\A0\A0'counter(page);
+        content: counter(page);
     }
 }
 
 @page chapter:left {
     @bottom-left {
-        content: counter(page) '\A0\A0|\A0\A0'""string(book-author) "";
+        content: counter(page) "" '\A0\A0|\A0\A0' string(book-title) "";
     }
 }
 
 @page chapter:right {
     @bottom-right {
-        content: ""string(book-title) ""'\A0\A0|\A0\A0'counter(page);
+        content: counter(page);
     }
 }
 
 @page back-matter:left {
     @bottom-left {
-        content: counter(page) '\A0\A0|\A0\A0'""string(book-author) "";
+        content: counter(page) "" '\A0\A0|\A0\A0' string(book-title) "";
     }
 }
 
 @page back-matter:right {
     @bottom-right {
-        content: ""string(book-title) ""'\A0\A0|\A0\A0'counter(page);
+        content: counter(page);
     }
 }
 

@@ -1,7 +1,7 @@
 /**
  * FF7e - design by Menencia
  *
- * Version 6
+ * Version 7
  *
  */
 
@@ -132,8 +132,8 @@ h2.chapter-author {
 
 body {
     font-family: "Alegreya", "Baskerville", "Times", serif;
-    font-size: 10pt;
-    line-height: 1.4em;
+    font-size: 11pt;
+    line-height: 1.5em;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -1167,7 +1167,17 @@ meta[name="pb-publisher-city"] {
     }
 }
 
+/** Blank pages for headers */
+
 @page front-matter:blank {
+    @top-right {
+        content: '';
+    }
+
+    @top-left {
+        content: '';
+    }
+
     @bottom-right {
         content: '';
     }
@@ -1178,16 +1188,14 @@ meta[name="pb-publisher-city"] {
 }
 
 @page chapter:blank {
-    @bottom-right {
+    @top-right {
         content: '';
     }
 
-    @bottom-left {
+    @top-left {
         content: '';
     }
-}
 
-@page back-matter:blank {
     @bottom-right {
         content: '';
     }
@@ -1198,6 +1206,14 @@ meta[name="pb-publisher-city"] {
 }
 
 @page :blank {
+    @top-right {
+        content: '';
+    }
+
+    @top-left {
+        content: '';
+    }
+
     @bottom-right {
         content: '';
     }
@@ -1208,6 +1224,14 @@ meta[name="pb-publisher-city"] {
 }
 
 @page blank-page {
+    @top-right {
+        content: '';
+    }
+
+    @top-left {
+        content: '';
+    }
+
     @bottom-right {
         content: '';
     }
@@ -1217,69 +1241,18 @@ meta[name="pb-publisher-city"] {
     }
 }
 
-@page front-matter:left {
-    @bottom-left {
-        padding-bottom: 0.4in;
-        font-family: "Alegreya Sans", "Helvetica", sans-serif;
-        font-size: 0.7em;
-        hyphens: none;
-        color: black;
-        text-transform: none;
-    }
-}
-
-@page chapter:left {
-    @bottom-left {
-        padding-bottom: 0.4in;
-        font-family: "Alegreya Sans", "Helvetica", sans-serif;
-        font-size: 0.7em;
-        hyphens: none;
-        color: black;
-    }
-}
-
-@page back-matter:left {
-    @bottom-left {
-        padding-bottom: 0.4in;
-        font-family: "Alegreya Sans", "Helvetica", sans-serif;
-        font-size: 0.7em;
-        hyphens: none;
-        color: black;
-    }
-}
-
-@page front-matter:right {
-    @bottom-right {
-        padding-bottom: 0.4in;
-        font-family: "Alegreya Sans", "Helvetica", sans-serif;
-        font-size: 0.7em;
-        hyphens: none;
-        color: black;
-        text-transform: none;
-    }
-}
-
-@page chapter:right {
-    @bottom-right {
-        padding-bottom: 0.4in;
-        font-family: "Alegreya Sans", "Helvetica", sans-serif;
-        font-size: 0.7em;
-        hyphens: none;
-        color: black;
-    }
-}
-
-@page back-matter:right {
-    @bottom-right {
-        padding-bottom: 0.4in;
-        font-family: "Alegreya Sans", "Helvetica", sans-serif;
-        font-size: 0.7em;
-        hyphens: none;
-        color: black;
-    }
-}
+/** Styles for headers */
 
 @page front-matter:left {
+    @top-left {
+        font-family: "Alegreya Sans", "Helvetica", sans-serif;
+        font-size: 0.6em;
+        hyphens: none;
+        letter-spacing: 0.5px;
+        word-spacing: normal;
+        color: black;
+        text-transform: uppercase;
+    }
     @bottom-left {
         padding-bottom: 0.4in;
         font-family: "Alegreya Sans", "Helvetica", sans-serif;
@@ -1293,6 +1266,15 @@ meta[name="pb-publisher-city"] {
 }
 
 @page chapter:left {
+    @top-left {
+        font-family: "Alegreya Sans", "Helvetica", sans-serif;
+        font-size: 0.6em;
+        hyphens: none;
+        letter-spacing: 0.5px;
+        word-spacing: normal;
+        color: black;
+        text-transform: uppercase;
+    }
     @bottom-left {
         padding-bottom: 0.4in;
         font-family: "Alegreya Sans", "Helvetica", sans-serif;
@@ -1319,6 +1301,15 @@ meta[name="pb-publisher-city"] {
 }
 
 @page front-matter:right {
+    @top-right {
+        font-family: "Alegreya Sans", "Helvetica", sans-serif;
+        font-size: 0.6em;
+        hyphens: none;
+        letter-spacing: 0.5px;
+        word-spacing: normal;
+        color: black;
+        text-transform: uppercase;
+    }
     @bottom-right {
         padding-bottom: 0.4in;
         font-family: "Alegreya Sans", "Helvetica", sans-serif;
@@ -1332,6 +1323,15 @@ meta[name="pb-publisher-city"] {
 }
 
 @page chapter:right {
+    @top-right {
+        font-family: "Alegreya Sans", "Helvetica", sans-serif;
+        font-size: 0.6em;
+        hyphens: none;
+        letter-spacing: 0.5px;
+        word-spacing: normal;
+        color: black;
+        text-transform: uppercase;
+    }
     @bottom-right {
         padding-bottom: 0.4in;
         font-family: "Alegreya Sans", "Helvetica", sans-serif;
@@ -1357,37 +1357,53 @@ meta[name="pb-publisher-city"] {
     }
 }
 
+/** First pages are only at position:right */
+
+@page front-matter:first {
+    @top-right {
+        content: '';
+    }
+}
+
+@page chapter:first {
+    @top-right {
+        content: '';
+    }
+}
+
+/** Content for headers */
+
 @page front-matter:left {
+    @top-left {
+        content: string(book-title);
+    }
     @bottom-left {
-        content: counter(page) "" '\A0\A0|\A0\A0' string(book-title) "";
+        content: counter(page);
     }
 }
 
 @page front-matter:right {
+    @top-right {
+        content: string(section-title);
+    }
     @bottom-right {
         content: counter(page);
     }
 }
 
 @page chapter:left {
-    @bottom-left {
-        content: counter(page) "" '\A0\A0|\A0\A0' string(book-title) "";
+    @top-left {
+        content: string(book-title);
     }
-}
-
-@page chapter:right {
-    @bottom-right {
+    @bottom-left {
         content: counter(page);
     }
 }
 
-@page back-matter:left {
-    @bottom-left {
-        content: counter(page) "" '\A0\A0|\A0\A0' string(book-title) "";
+@page chapter:right {
+    @top-right {
+        content: string(section-title);
     }
-}
-
-@page back-matter:right {
     @bottom-right {
         content: counter(page);
     }
